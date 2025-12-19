@@ -10,7 +10,7 @@
 
 ## Liens
 - Site statique (Azure Static Website): https://alphonsestorage.z9.web.core.windows.net/
-- Function App: https://alphonsefonction.azurewebsites.net
+- Function App: https://alphonsefonction-hzeee3h3beada9gw.canadacentral-01.azurewebsites.net
 
 ## Endpoints
 - POST `/api/Televerserimages` : téléverse une image (multipart/form-data)
