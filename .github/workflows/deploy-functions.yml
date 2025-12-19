@@ -20,7 +20,7 @@ jobs:
           dotnet-version: "8.0.x"
 
       - name: Restaurer
-        run: dotnet restore
+        run: dotnet restore alphonsefonction.csproj
         
 
       - name: Compiler
