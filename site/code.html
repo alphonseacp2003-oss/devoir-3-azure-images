@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Devoir 3 — Téléversement & Miniatures</title>
+  <link rel="stylesheet" href="code.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">A2</div>
+        <div>
+          <h1>Gestion d’images</h1>
+          <p class="subtitle">Téléversement + Miniatures (256×256) via Azure Functions</p>
+        </div>
+      </div>
+
+      <div class="status" id="status">
+        <span class="dot" id="dot"></span>
+        <span id="statusText">Prêt</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>1) Téléverser une image</h2>
+
+      <div class="row">
+        <label class="file" for="fileInput">
+          <input id="fileInput" type="file" accept="image/*" />
+          <span class="file-btn">Choisir une image</span>
+          <span class="file-name" id="fileName">Aucun fichier sélectionné</span>
+        </label>
+
+        <button class="btn primary" id="uploadBtn">Téléverser</button>
+        <button class="btn" id="refreshBtn" title="Rafraîchir la liste">Rafraîchir</button>
+      </div>
+
+      <div class="hint">
+        Astuce : après upload, la miniature est créée automatiquement dans <strong>ireduites</strong>.
+      </div>
+
+      <div class="preview" id="preview" aria-hidden="true"></div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>2) Miniatures disponibles</h2>
+        <div class="pill" id="countPill">0 image</div>
+      </div>
+
+      <div class="grid" id="grid">
+        <!-- images injectées ici -->
+      </div>
+
+      <div class="empty" id="emptyState">
+        <p>Aucune miniature trouvée.</p>
+        <p class="muted">Clique “Rafraîchir” après avoir téléversé une image.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Devoir 3 — Azure Functions (.NET 8) • Containers: <code>images</code> & <code>ireduites</code></p>
+    </footer>
+  </main>
+
+  <script src="code.js"></script>
+</body>
+</html>
