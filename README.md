@@ -1,6 +1,6 @@
 
 # Devoir 3 – Téléversement & redimensionnement d’images (Azure)
-
+auteur : Romuald alphonse bampaly preira PRER18040300
 ## Objectif
 - Téléverser une image via une Azure Function HTTP (POST)
 - Stocker l’image dans le conteneur `images`
@@ -13,8 +13,8 @@
 - Function App: https://alphonsefonction-hzeee3h3beada9gw.canadacentral-01.azurewebsites.net
 
 ## Endpoints
-- POST `/api/Televerserimages` : téléverse une image (multipart/form-data)
-- GET `/api/ireduites` : retourne la liste des URL d’images réduites
+- POST `/api/Televerser` : téléverse une image (multipart/form-data)
+- GET `/api/ListImages_reduites` : retourne la liste des URL d’images réduites
 
 ## Conteneurs Blob
 - `images` : images originales
