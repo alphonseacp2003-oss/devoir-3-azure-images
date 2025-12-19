@@ -21,7 +21,7 @@ jobs:
 
       - name: Restaurer
         run: dotnet restore
-        working-directory: functions
+        
 
       - name: Compiler
         run: dotnet build --configuration Release --no-restore
