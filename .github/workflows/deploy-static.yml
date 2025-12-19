@@ -1,0 +1,25 @@
+name: Deployer le site statique vers $web
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "site/**"
+      - ".github/workflows/deploy-static.yml"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Recuperer le code
+        uses: actions/checkout@v4
+
+      - name: Copier le site dans $web
+        uses: azure/CLI@v2
+        with:
+          inlineScript: |
+            az storage blob upload-batch \
+              --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}" \
+              --destination '$web' \
+              --source "site" \
+              --overwrite true
